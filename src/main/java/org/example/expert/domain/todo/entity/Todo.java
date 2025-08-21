@@ -14,6 +14,7 @@ import java.util.List;
 @Getter
 @Entity
 @NoArgsConstructor
+@NamedEntityGraph(name ="todo.withUser", attributeNodes = {@NamedAttributeNode("user")})
 @Table(name = "todos")
 public class Todo extends Timestamped {
 
